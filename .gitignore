@@ -1,0 +1,13 @@
+# Keep recommendation letter drafts private.
+professor_*
+*recommendation_draft*
+
+# LaTeX compilation artifacts.
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv

@@ -1,0 +1,70 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Overleaf: compile with pdfLaTeX.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\hypersetup{
+  pdftitle={Personal Statement -- UVA Computer Science PhD},
+  pdfauthor={Jinyoon Kim}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65\baselineskip}
+\linespread{1.05}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Jinyoon Kim}
+\fancyhead[R]{\small Personal Statement}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+
+\begin{center}
+  {\large\textbf{University of Virginia}}\\[3pt]
+  Computer Science Ph.D. Application \textbar\ Fall 2027
+\end{center}
+\vspace{0.25\baselineskip}
+
+% Working draft: part-aware research, long-horizon interaction, and SMGLib implementation/tutorial
+% Contributions updated from Jinyoon's account of Part2Action and long-horizon work.
+% Part2Action and policy-learning directions updated from the October 26 research notes.
+% Robustness experiments and MolmoBot adaptation remain proposed work.
+% Before submission, add a concrete experimental example if available;
+% do not imply that ongoing investigations have established final results.
+% Mentorship preferences reflect Jinyoon's emphasis on active communication,
+% learning through joint research, and growing independence.
+% No advising commitment, experimental outcome, or future result is implied.
+% Faculty fit must be revisited: Kuo is listed but not currently marked
+% "Currently Recruiting" on the CS faculty directory checked 2026-10-18.
+% Sources for the faculty-fit paragraph:
+% https://engineering.virginia.edu/department/computer-science/faculty
+% https://engineering.virginia.edu/faculty/rohan-chandra
+% https://engineering.virginia.edu/faculty/tariq-iqbal
+An instruction such as ``grasp the bottle at its neck'' captures the research problem that interests me: how can a robot connect language about an object part with an appropriate physical action? As a master's student in Computer Science at the University of Virginia, I am exploring part-guided robotic manipulation with Professor Yen-Ling Kuo and contributing to research on long-horizon interaction. I want to pursue a Ph.D. to investigate how part-aware representations can support generalizable manipulation and eventually human--robot assistance. Rapid advances in AI make this an exciting direction, but my motivation is a specific scientific question: what information helps a robot turn understanding into reliable interaction?
+
+In Part2Action, my research with Professor Yen-Ling Kuo, I design and implement the model architecture and investigate how visual part representations and 3D contact geometry guide manipulation. Translating foundation-model capabilities into accurate robot behavior has proved challenging even with substantial data. This has led me to examine what information a policy needs beyond identifying the relevant part: a contact location alone does not specify a suitable wrist orientation, approach, or closing time. I am exploring how to study robustness to variations in interaction position, orientation, and timing through controlled simulator experiments. These planned experiments extend my focus from predicting a demonstrated interaction to understanding which variations preserve task success. This work motivates my longer-term goal of robots that translate people's references to object parts into reliable assistance.
+
+In Professor Kuo's Interactive Robotics course, I have proposed a complementary project on part-aware adaptation of pretrained MolmoBot policies for articulated manipulation, such as opening drawers or cabinets. Using MolmoSpaces, I plan to compare small adaptation modules that incorporate task-relevant part features with controls using matched data and comparable model capacity. The study will examine robustness to visual changes and imperfect part localization, initially using simulator-provided masks and controlled mask corruption. It will also investigate generalization to held-out object geometries where feasible. Experiments have not yet begun, but designing these comparisons has sharpened the question I want to answer: when does explicit part information help a pretrained policy, and when can inaccurate localization make it less reliable?
+
+Within the larger long-horizon interactive robotics effort at UVA's Link Lab, I am primarily responsible for training models based on the MolmoBot framework to handle tasks that combine multiple stages. I also prepare and generate new datasets using MolmoSpaces. This work extends my focus from individual interactions to sequences that combine navigation and manipulation, such as reaching and opening a door. Adapting a vision--language--action model to these tasks has proved difficult through fine-tuning alone. I am investigating how training choices and combinations of mechanisms can support more robust behavior across task stages. This ongoing work has made the relationship between data, model capabilities, and sustained task execution a central question in my research.
+
+My preparation also includes experience implementing robotic systems and examining how their behavior should be interpreted. In the SMGLib medical drone coordination project, I implemented priority scoring, holding orbits, arrival-time and expiry-aware negotiation, round-trip delivery behavior, and baseline trajectory planning for drones sharing a landing pad. I also integrated collaborators' lookahead and LLM methods. Connecting these decisions with the simulation's movement and delivery lifecycles gave me experience taking responsibility for a substantial implementation within a shared framework.
+
+At Professor Rohan Chandra's invitation, I am also leading preparation of a tutorial manuscript on SMGLib, targeting IEEE Robotics \& Automation Magazine. This is a separate effort to make the existing framework understandable and usable for researchers and students. I studied its geometric, optimization-based, and learned navigation backends, prepared a user-handbook draft, and developed reproducible visualizations of doorway, hallway, and intersection encounters. Examining differences in execution settings and completion reports highlighted a distinction central to coordination: avoiding collisions does not necessarily mean that robots will make progress. The manuscript remains in preparation. Together, the implementation and tutorial work provide experience connecting algorithms, observed behavior, and the evidence needed to explain a research system accurately.
+
+My earlier computer vision research in medical image analysis helped clarify the purpose behind my interests. Although it provided experience developing and evaluating learning systems and led to publications, I realized that what most interested me about healthcare applications was the possibility of robots physically assisting people. I wanted to work on systems that could act on their understanding and participate in human activities. That realization led me toward embodied AI, with human assistance as the motivation connecting my interests in part-aware manipulation and long-horizon interaction.
+
+At UVA, I would like to build on my work with Professor Kuo to investigate how part-aware representations can support robust manipulation and, ultimately, human--robot assistance. My doctoral questions grow directly from this work: how can a robot connect a person's reference to an object part with an appropriate action, and adapt that action when the object or interaction conditions change? I am also interested in Professor Rohan Chandra's research on autonomy in multi-robot and human--robot systems, building on the coordination questions I have encountered through SMGLib. Professor Tariq Iqbal's research on robots that understand human intentions and coordinate their actions within human--robot teams offers a complementary connection to my interest in assistance. Together, these directions make UVA an environment where I could connect reliable object interaction with the broader challenge of robots collaborating with people and other robots.
+
+I would value an advising relationship built on active communication and opportunities to work through research questions together. Discussing experimental design, unexpected results, and alternative explanations with my advisor would help me learn from their insights and develop my own research judgment. I would pair this guidance with responsibility for implementation and experimentation, growing more independent in defining and pursuing research directions. My collaborative project experience also makes a team-based environment appealing, with clear individual contributions and shared discussion of ideas. Through doctoral study at UVA, I hope to develop into an independent researcher who can connect advances in AI with reliable robotic interaction and useful assistance to people.
+
+\end{document}
